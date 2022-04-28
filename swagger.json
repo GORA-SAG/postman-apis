@@ -297,7 +297,7 @@
                     "pet"
                 ],
                 "summary": "Find pet by ID",
-                "description": "Returns a single pet",
+                "description": "Returns a single pet from Przemek's petstore",
                 "operationId": "getPetById",
                 "produces": [
                     "application/json",
@@ -325,6 +325,9 @@
                     },
                     "404": {
                         "description": "Pet not found"
+                    },
+                    "429": {
+                        "description": "Too many requests"
                     }
                 },
                 "security": [
