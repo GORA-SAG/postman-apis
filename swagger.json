@@ -325,7 +325,7 @@
                     },
                     "404": {
                         "description": "Pet not found"
-                    }
+                    },
                     "429": {
                         "description": "alkjsdhf"
                     }
