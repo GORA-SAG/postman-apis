@@ -297,7 +297,7 @@
                     "pet"
                 ],
                 "summary": "Find pet by ID",
-                "description": "Returns a single pet BBBBBBBBB",
+                "description": "Returns a single pet",
                 "operationId": "getPetById",
                 "produces": [
                     "application/json",
@@ -325,9 +325,6 @@
                     },
                     "404": {
                         "description": "Pet not found"
-                    },
-                    "429": {
-                        "description": "alkjsdhf"
                     }
                 },
                 "security": [
