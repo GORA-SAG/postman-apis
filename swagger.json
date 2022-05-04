@@ -277,7 +277,7 @@
                         }
                     },
                     "400": {
-                        "description": "Invalid tag value"
+                        "description": "Invalid tag     value"
                     }
                 },
                 "security": [
