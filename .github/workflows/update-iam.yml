@@ -1,0 +1,29 @@
+name: Update IAM Policy Action
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-iam-policyaction:
+    runs-on: [analysts-demo]
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Read File
+        run: |
+          echo "PACKAGE_JSON=$(jq -c . < ${{ github.workspace }}/policies/transport/protocol.json)" >> $GITHUB_ENV
+
+      - name: Write File
+        run: |
+          echo '${{ fromJson(env.PACKAGE_JSON).version }}'
+
+      - name: Update IAM Policy Action
+        run: |
+          update_status=$(curl -o /dev/null -s -w "%{http_code}" --location --request PUT "${{ vars.baseURL }}/policyActions/253cae74-0a0e-4f52-95ba-84f7c3b067ce" -H "Content-Type: application/json" -H "Authorization: Basic ${{ secrets.basicAuth }}")      
+
+          if [ "${update_status}" == "200" ]; then
+            echo "API updated successfully."
+          else
+            echo "Unable to update API."
+          fi
