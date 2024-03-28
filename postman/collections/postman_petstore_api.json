@@ -58,10 +58,8 @@
 									],
 									"variable": [
 										{
-											"id": "80ad583e-3795-4747-8af0-9f5efce9a399",
 											"key": "petId",
-											"value": "-64321766",
-											"description": "(Required) ID of pet to return"
+											"value": ""
 										}
 									]
 								},
@@ -110,7 +108,6 @@
 											],
 											"variable": [
 												{
-													"id": "80ad583e-3795-4747-8af0-9f5efce9a399",
 													"key": "petId",
 													"value": "-64321766",
 													"description": "(Required) ID of pet to return"
@@ -173,7 +170,6 @@
 											],
 											"variable": [
 												{
-													"id": "80ad583e-3795-4747-8af0-9f5efce9a399",
 													"key": "petId",
 													"value": "-64321766",
 													"description": "(Required) ID of pet to return"
@@ -236,7 +232,6 @@
 											],
 											"variable": [
 												{
-													"id": "80ad583e-3795-4747-8af0-9f5efce9a399",
 													"key": "petId",
 													"value": "-64321766",
 													"description": "(Required) ID of pet to return"
@@ -302,7 +297,6 @@
 									],
 									"variable": [
 										{
-											"id": "daa588c3-1b24-426d-b2e8-a20846a2b403",
 											"key": "petId",
 											"value": "-64321766",
 											"description": "(Required) ID of pet that needs to be updated"
@@ -351,7 +345,6 @@
 											],
 											"variable": [
 												{
-													"id": "daa588c3-1b24-426d-b2e8-a20846a2b403",
 													"key": "petId",
 													"value": "-64321766",
 													"description": "(Required) ID of pet that needs to be updated"
@@ -401,7 +394,6 @@
 									],
 									"variable": [
 										{
-											"id": "7b9d29ba-2631-4e79-abb5-c6ec0df42335",
 											"key": "petId",
 											"value": "-64321766",
 											"description": "(Required) Pet id to delete"
@@ -435,7 +427,6 @@
 											],
 											"variable": [
 												{
-													"id": "7b9d29ba-2631-4e79-abb5-c6ec0df42335",
 													"key": "petId",
 													"value": "-64321766",
 													"description": "(Required) Pet id to delete"
@@ -480,7 +471,6 @@
 											],
 											"variable": [
 												{
-													"id": "7b9d29ba-2631-4e79-abb5-c6ec0df42335",
 													"key": "petId",
 													"value": "-64321766",
 													"description": "(Required) Pet id to delete"
@@ -552,7 +542,6 @@
 									],
 									"variable": [
 										{
-											"id": "3bbed7d5-abee-4404-a806-b3c195de17ed",
 											"key": "petId",
 											"value": "-64321766",
 											"description": "(Required) ID of pet to update"
@@ -592,7 +581,7 @@
 													"key": "file",
 													"type": "file",
 													"description": "file to upload",
-													"value": null
+													"src": []
 												}
 											]
 										},
@@ -608,7 +597,6 @@
 											],
 											"variable": [
 												{
-													"id": "3bbed7d5-abee-4404-a806-b3c195de17ed",
 													"key": "petId",
 													"value": "-64321766",
 													"description": "(Required) ID of pet to update"
@@ -1217,7 +1205,6 @@
 											],
 											"variable": [
 												{
-													"id": "dc274326-520b-47f4-a22f-ff7daea3a30e",
 													"key": "orderId",
 													"value": "8",
 													"description": "(Required) ID of pet that needs to be fetched"
@@ -1250,7 +1237,6 @@
 													],
 													"variable": [
 														{
-															"id": "dc274326-520b-47f4-a22f-ff7daea3a30e",
 															"key": "orderId",
 															"value": "8",
 															"description": "(Required) ID of pet that needs to be fetched"
@@ -1294,7 +1280,6 @@
 													],
 													"variable": [
 														{
-															"id": "dc274326-520b-47f4-a22f-ff7daea3a30e",
 															"key": "orderId",
 															"value": "8",
 															"description": "(Required) ID of pet that needs to be fetched"
@@ -1338,7 +1323,6 @@
 													],
 													"variable": [
 														{
-															"id": "dc274326-520b-47f4-a22f-ff7daea3a30e",
 															"key": "orderId",
 															"value": "8",
 															"description": "(Required) ID of pet that needs to be fetched"
@@ -1382,7 +1366,6 @@
 											],
 											"variable": [
 												{
-													"id": "e20bd280-2b6e-4567-bf27-37b92480c45e",
 													"key": "orderId",
 													"value": "51457573",
 													"description": "(Required) ID of the order that needs to be deleted"
@@ -1410,7 +1393,6 @@
 													],
 													"variable": [
 														{
-															"id": "e20bd280-2b6e-4567-bf27-37b92480c45e",
 															"key": "orderId",
 															"value": "51457573",
 															"description": "(Required) ID of the order that needs to be deleted"
@@ -1449,7 +1431,6 @@
 													],
 													"variable": [
 														{
-															"id": "e20bd280-2b6e-4567-bf27-37b92480c45e",
 															"key": "orderId",
 															"value": "51457573",
 															"description": "(Required) ID of the order that needs to be deleted"
@@ -1751,7 +1732,6 @@
 									],
 									"variable": [
 										{
-											"id": "f894b865-2e28-4530-b693-d734e54d2dae",
 											"key": "username",
 											"value": "proident id ad ut",
 											"description": "(Required) The name that needs to be fetched. Use user1 for testing. "
@@ -1782,7 +1762,6 @@
 											],
 											"variable": [
 												{
-													"id": "f894b865-2e28-4530-b693-d734e54d2dae",
 													"key": "username",
 													"value": "proident id ad ut",
 													"description": "(Required) The name that needs to be fetched. Use user1 for testing. "
@@ -1824,7 +1803,6 @@
 											],
 											"variable": [
 												{
-													"id": "f894b865-2e28-4530-b693-d734e54d2dae",
 													"key": "username",
 													"value": "proident id ad ut",
 													"description": "(Required) The name that needs to be fetched. Use user1 for testing. "
@@ -1866,7 +1844,6 @@
 											],
 											"variable": [
 												{
-													"id": "f894b865-2e28-4530-b693-d734e54d2dae",
 													"key": "username",
 													"value": "proident id ad ut",
 													"description": "(Required) The name that needs to be fetched. Use user1 for testing. "
@@ -1922,7 +1899,6 @@
 									],
 									"variable": [
 										{
-											"id": "7806d724-e46d-4dde-9194-5547c1f870f5",
 											"key": "username",
 											"value": "proident id ad ut",
 											"description": "(Required) name that need to be updated"
@@ -1963,7 +1939,6 @@
 											],
 											"variable": [
 												{
-													"id": "7806d724-e46d-4dde-9194-5547c1f870f5",
 													"key": "username",
 													"value": "proident id ad ut",
 													"description": "(Required) name that need to be updated"
@@ -2015,7 +1990,6 @@
 											],
 											"variable": [
 												{
-													"id": "7806d724-e46d-4dde-9194-5547c1f870f5",
 													"key": "username",
 													"value": "proident id ad ut",
 													"description": "(Required) name that need to be updated"
@@ -2058,7 +2032,6 @@
 									],
 									"variable": [
 										{
-											"id": "b9a53613-d2be-49e4-ba42-5e156638a46d",
 											"key": "username",
 											"value": "proident id ad ut",
 											"description": "(Required) The name that needs to be deleted"
@@ -2085,7 +2058,6 @@
 											],
 											"variable": [
 												{
-													"id": "b9a53613-d2be-49e4-ba42-5e156638a46d",
 													"key": "username",
 													"value": "proident id ad ut",
 													"description": "(Required) The name that needs to be deleted"
@@ -2123,7 +2095,6 @@
 											],
 											"variable": [
 												{
-													"id": "b9a53613-d2be-49e4-ba42-5e156638a46d",
 													"key": "username",
 													"value": "proident id ad ut",
 													"description": "(Required) The name that needs to be deleted"
