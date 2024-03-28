@@ -1,0 +1,49 @@
+name: Update API
+
+on:
+  workflow_dispatch:
+
+  push:
+    paths:
+      - "swagger.json"
+
+jobs:
+  update-api:
+    runs-on: [analysts-demo]
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        
+      - name: Deactivate API
+        run: |
+          deactivate_status=$(curl -o /dev/null -s -w "%{http_code}" --location --request PUT "${{ vars.baseURL }}/apis/6ad71797-19d0-419c-a6cb-2a62c8178ad7/deactivate" -H "Accept: application/json" -H "Authorization: Basic ${{ secrets.basicAuth }}")
+
+          if [ "${deactivate_status}" == "200" ]; then
+            echo "API deactivated successfully."
+          elif [ "${deactivate_status}" == "400" ]; then
+            echo "API is in deactivate state."
+          else
+            echo "Unable to deactivate API."
+          fi
+
+      - name: Update API
+        run: |
+          update_status=$(curl -o /dev/null -s -w "%{http_code}" --location --request PUT "${{ vars.baseURL }}/apis/6ad71797-19d0-419c-a6cb-2a62c8178ad7?overwriteTags=null" -F type=openapi -F file=@"${{github.workspace}}/swagger.json" -F apiName="postman-petstore"  -H "Authorization: Basic ${{ secrets.basicAuth }}")      
+
+          if [ "${update_status}" == "200" ]; then
+            echo "API updated successfully."
+          else
+            echo "Unable to update API."
+          fi
+
+      - name: Activate API
+        run: |
+          activate_status=$(curl -o /dev/null -s -w "%{http_code}" --location --request PUT "${{ vars.baseURL }}/apis/6ad71797-19d0-419c-a6cb-2a62c8178ad7/activate" -H "Accept: application/json" -H "Authorization: Basic ${{ secrets.basicAuth }}")
+
+          if [ "${activate_status}" == "200" ]; then
+            echo "API activated successfully."
+          elif [ "${deactivate_status}" == "400" ]; then
+            echo "API is in active state."
+          else
+            echo "Unable to activate API."
+          fi
