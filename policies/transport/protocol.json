@@ -1,22 +1,19 @@
 {
-    "policyAction": {
-        "id": "253cae74-0a0e-4f52-95ba-84f7c3b067ce",
-        "names": [
-            {
-                "value": "Enable HTTP / HTTPS",
-                "locale": "en"
-            }
-        ],
-        "templateKey": "entryProtocolPolicy",
-        "parameters": [
-            {
-                "templateKey": "protocol",
-                "values": [
-                    "http",
-                    "https"
-                ]
-            }
-        ],
-        "active": false
-    }
+    "names": [
+        {
+            "value": "Enable HTTP / HTTPS",
+            "locale": "en"
+        }
+    ],
+    "templateKey": "entryProtocolPolicy",
+    "parameters": [
+        {
+            "templateKey": "protocol",
+            "values": [
+                "http",
+                "https"
+            ]
+        }
+    ],
+    "active": false
 }
