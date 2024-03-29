@@ -1,19 +1,20 @@
 {
-    "names": [
-        {
-            "value": "Enable HTTP / HTTPS",
-            "locale": "en"
-        }
-    ],
-    "templateKey": "entryProtocolPolicy",
-    "parameters": [
-        {
-            "templateKey": "protocol",
-            "values": [
-                "http",
-                "https"
-            ]
-        }
-    ],
-    "active": false
+    "policyAction": {
+        "names": [
+            {
+                "value": "Enable HTTP / HTTPS",
+                "locale": "en"
+            }
+        ],
+        "templateKey": "entryProtocolPolicy",
+        "parameters": [
+            {
+                "templateKey": "protocol",
+                "values": [
+                    "http"
+                ]
+            }
+        ],
+        "active": false
+    }
 }
