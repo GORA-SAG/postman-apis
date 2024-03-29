@@ -14,11 +14,6 @@ jobs:
         run: |
           echo "PACKAGE_JSON=$(jq -c . < ${{ github.workspace }}/policies/transport/protocol.json)" >> $GITHUB_ENV
 
-      - name: Write File
-        run: |
-          policyAction=${{ fromJson(env.PACKAGE_JSON).policyAction }}
-          echo '${{ policyAction }}'
-
       - name: Update Transport Policy Action
         run: |
           update_status=$(curl -o /dev/null -s -w "%{http_code}" -XPUT "${{ vars.baseURL }}/policyActions/253cae74-0a0e-4f52-95ba-84f7c3b067ce" -H "Authorization: Basic ${{ secrets.basicAuth }}" -H "Content-Type: application/json" -d fromJson(env.PACKAGE_JSON).policyAction)      
