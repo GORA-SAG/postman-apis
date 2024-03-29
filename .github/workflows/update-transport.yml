@@ -13,4 +13,4 @@ jobs:
       - name: Update Transport Policy Action
         run: |
           content=`cat ${{ github.workspace }}/policies/transport/protocol.json`
-          curl -o /dev/null -s -w "%{http_code}" -XPUT "${{ vars.baseURL }}/policyActions/253cae74-0a0e-4f52-95ba-84f7c3b067ce" -H "Authorization: Basic ${{ secrets.basicAuth }}" -H "Content-Type: application/json" -d '$content' --data '$content'      
+          curl -o /dev/null -s -w "%{http_code}" -XPUT "${{ vars.baseURL }}/policyActions/253cae74-0a0e-4f52-95ba-84f7c3b067ce" -H "Authorization: ${{ secrets.basicAuth }}" -H "Content-Type: application/json" -d '$content' --data '$content'      
