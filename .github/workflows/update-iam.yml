@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  update-iam-policyaction:
+  update-iam-policy-action:
     runs-on: [analysts-demo]
     steps:
       - name: Checkout Code
@@ -16,7 +16,7 @@ jobs:
 
       - name: Write File
         run: |
-          echo '${{ fromJson(env.PACKAGE_JSON).version }}'
+          echo '${{ fromJson(env.PACKAGE_JSON).policyAction }}'
 
       - name: Update IAM Policy Action
         run: |
