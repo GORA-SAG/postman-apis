@@ -13,7 +13,7 @@ jobs:
       - name: Read File
         run: |
           content=`cat ${{ github.workspace }}/policies/transport/protocol.json`
-          echo "content=$content" >> $GITHUB_ENV
+          echo "content=asd" >> $GITHUB_ENV
 
       - name: Update Transport Policy Action
         run: |
