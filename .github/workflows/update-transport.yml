@@ -1,10 +1,10 @@
-name: Update IAM Policy Action
+name: Update Transport Policy Action
 
 on:
   workflow_dispatch:
 
 jobs:
-  update-iam-policy-action:
+  update-transport-policy-action:
     runs-on: [analysts-demo]
     steps:
       - name: Checkout Code
@@ -19,12 +19,12 @@ jobs:
           policyAction=${{ fromJson(env.PACKAGE_JSON).policyAction }}
           echo '${{ policyAction }}'
 
-      - name: Update IAM Policy Action
+      - name: Update Transport Policy Action
         run: |
           update_status=$(curl -o /dev/null -s -w "%{http_code}" -XPUT "${{ vars.baseURL }}/policyActions/253cae74-0a0e-4f52-95ba-84f7c3b067ce" -H "Authorization: Basic ${{ secrets.basicAuth }}" -H "Content-Type: application/json" -d fromJson(env.PACKAGE_JSON).policyAction)      
 
           if [ "${update_status}" == "200" ]; then
-            echo "API updated successfully."
+            echo "Transport Policy Action updated successfully."
           else
-            echo "Unable to update API."
+            echo "Unable to update Transport Policy Action."
           fi
