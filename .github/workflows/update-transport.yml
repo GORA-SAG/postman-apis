@@ -15,7 +15,7 @@ jobs:
           content=`cat ${{ github.workspace }}/policies/transport/protocol.json`
           echo $content
           
-          update_status=$(curl -o /dev/null -s -w "%{http_code}" -XPUT "${{ vars.baseURL }}/policyActions/253cae74-0a0e-4f52-95ba-84f7c3b067ce" -H "Authorization: Basic ${{ secrets.basicAuth }}" -H "Content-Type: application/json" -d @"${{ github.workspace }}/policies/transport/protocol.json")      
+          update_status=$(curl -o /dev/null -s -w "%{http_code}" -XPUT "${{ vars.baseURL }}/policyActions/253cae74-0a0e-4f52-95ba-84f7c3b067ce" -H "Authorization: Basic ${{ secrets.basicAuth }}" -H "Content-Type: application/json" -d '$content' --data '$content')      
 
           if [ "${update_status}" == "200" ]; then
             echo "Transport Policy Action updated successfully."
