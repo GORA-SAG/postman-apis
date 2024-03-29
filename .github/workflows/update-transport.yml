@@ -10,13 +10,8 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Read Policy Action
-        id: read
+      - name: Update Transport Policy Action
         run: |
           content=$(cat ${{ github.workspace }}/policies/transport/protocol.json | jq)
-          echo "content=$content" >> "$GITHUB_OUTPUT"
-
-      - name: Pring Env Variable
-        run: |
-          echo ${{ steps.read.outputs.content }}
+          curl -XPUT "${{ vars.baseURL }}/policyActions/253cae74-0a0e-4f52-95ba-84f7c3b067ce" -H "Authorization: ${{ secrets.basicAuth }}" -H "Content-Type: application/json" -d "$content"
 
