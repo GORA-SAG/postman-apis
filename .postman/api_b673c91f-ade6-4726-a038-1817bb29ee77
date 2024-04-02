@@ -9,11 +9,13 @@ id = b673c91f-ade6-4726-a038-1817bb29ee77
 
 [config.relations.collections]
 rootDirectory = postman/collections
+files[] = {"id":"20736754-90933cd6-72d6-422d-9853-7cc7da37d166","path":"postman_petstore_api(1).json","metaData":{}}
 files[] = {"id":"20736754-c3ee2373-d1cb-4ae4-8e84-c77ba122ab59","path":"postman_petstore_api.json","metaData":{}}
 
 [config.relations.collections.metaData]
 
 [config.relations.apiDefinition]
+files[] = {"path":"index Copy.json","metaData":{}}
 files[] = {"path":"index.json","metaData":{}}
 files[] = {"path":"swagger.json","metaData":{}}
 
