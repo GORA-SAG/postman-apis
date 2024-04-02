@@ -1,7 +1,7 @@
 {
 	"swagger": "2.0",
 	"info": {
-		"description": "This is a sample server Petstore server.",
+		"description": "gora here",
 		"version": "1.0.7",
 		"title": "Swagger Petstore",
 		"termsOfService": "http://swagger.io/terms/",
@@ -42,7 +42,7 @@
 		"http"
 	],
 	"paths": {
-		"/pet/{petId}/uploadPicture": {
+		"/pet/{petId}/uploadImage": {
 			"post": {
 				"tags": [
 					"pet"
