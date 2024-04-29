@@ -1,7 +1,7 @@
 {
 	"swagger": "2.0",
 	"info": {
-		"description": "Petstore API. 17th April changes. Dry run changes - 28th April changes.",
+		"description": "Petstore API. 17th April changes. Dry run changes - 29th April changes -dry run.",
 		"version": "1.0.7",
 		"title": "Swagger Petstore",
 		"termsOfService": "http://swagger.io/terms/",
